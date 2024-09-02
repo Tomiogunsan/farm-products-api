@@ -10,3 +10,7 @@ myEmitter.on('newSale', () => {
 myEmitter.emit()
 
 const server = http.createServer()
+server.on('request', (req, res) => {
+    console.log(request)
+    res.end('Another request')
+})
